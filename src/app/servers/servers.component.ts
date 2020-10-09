@@ -12,6 +12,7 @@ export class ServersComponent implements OnInit {
   newServer = '';
   username = '';
   isUsernameEmpty = true;
+  isServerCreated = false;
 
   constructor() {
     setTimeout(() => this.allowCreateServer = false, 2000);
@@ -21,12 +22,9 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer() {
-    this.isCreated = !this.isCreated;
-    if (!this.isCreated) {
-      this.createServer = 'No server was created';
-    } else {
+    this.isServerCreated = true;
       this.createServer = 'A server was created! Name is: ' + this.newServer;
-    }
+
   }
 
   isNotEmpty(event: Event) {
