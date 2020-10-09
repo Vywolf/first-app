@@ -18,7 +18,7 @@ export class ServerComponent implements OnInit {
     
   }
   getStatus(){
-    let val: = Math.random();
+    val: number = Math.random();
     console.log(val);
     
     this.serverStatus =  val > 0.5 ? 'online':'offline'
