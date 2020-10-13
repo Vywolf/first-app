@@ -15,6 +15,10 @@ export class ServersComponent implements OnInit {
   username: string = '';
   isUsernameEmpty: boolean = true;
   isServerCreated: boolean = false;
+  showParagraph: boolean = false;
+  numberOfClicks: number = 0;
+
+  clicks = [];
   constructor() {
     setTimeout(() => {
       this.enabled = true;
@@ -43,5 +47,12 @@ export class ServersComponent implements OnInit {
   onUpdateServer(event: any){
     this.serverName = (<HTMLInputElement>event.target).value;
     console.log(event);
+  }
+  hideOrShow(){
+    this.showParagraph = !this.showParagraph;
+    this.numberOfClicks = this.numberOfClicks+1;
+    this.clicks.push(this.numberOfClicks);
+    console.log(this.clicks);
+    
   }
 }

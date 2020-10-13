@@ -15,3 +15,12 @@
 <button type="button" class="btn btn-primary" [disabled]="isUsernameEmpty" (click)="clearName()">Clear!</button>
 <app-server></app-server>
 <app-server></app-server>
+<br>
+<button type="button" class="btn btn-primary" (click)="hideOrShow()">Display details</button>
+<p *ngIf="showParagraph; else nothing">Secret Pass: tujefa</p>
+<ng-template #nothing>
+    <p></p>
+</ng-template>
+<div *ngFor="let click of clicks" [ngStyle]="{'background-color': 'transparent'}">
+    {{click}}
+</div>
