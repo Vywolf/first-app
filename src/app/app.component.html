@@ -1,2 +1,7 @@
 
-<app-servers> </app-servers>
+<button type="button" class="btn btn-primary" (click)="toggleTheParagraph()">Display details</button>
+<p *ngIf=isShowed>You Clicked the Button</p>
+<div>
+    <p *ngFor="let element of arrayOfClicks; let i = index" [ngStyle]="setBackgroundColor(i)"
+        [ngClass]="setLetterColor(i)">{{ element | date:'dd/MM/yyyy/ hh:mm:ss' }}</p>
+</div>

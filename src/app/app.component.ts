@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name = 'Max';
+  isShowed = false;
+  arrayOfClicks = [];
+
+  toggleTheParagraph() {
+    this.isShowed = !this.isShowed;
+    this.arrayOfClicks.push(Date.now());
+    
+  }
+
+  setBackgroundColor(i: number) {
+    return {'background-color': i >= 5 ? 'blue' : 'white'};
+  }
+
+  setLetterColor(i: number) {
+    return {'whiteLetter': i >= 5};
+  }
 }
