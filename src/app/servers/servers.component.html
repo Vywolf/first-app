@@ -21,6 +21,6 @@
 <ng-template #nothing>
     <p></p>
 </ng-template>
-<div *ngFor="let click of clicks" [ngStyle]="{'background-color': click >= 5 'blue' ? 'transparent'}">
+<div *ngIf="true" [ngClass]="{'background-color:' click >= 5 ? 'blue' : 'transparent'}">
     {{click}}
 </div>
